@@ -1,0 +1,41 @@
+[ {
+  "uid" : "c234440de5b42adc",
+  "name" : "Verify login",
+  "time" : {
+    "start" : 1580191092571,
+    "stop" : 1580191098365,
+    "duration" : 5794
+  },
+  "status" : "failed",
+  "severity" : "blocker"
+}, {
+  "uid" : "4a73508efe443473",
+  "name" : "Verify user Registration1",
+  "time" : {
+    "start" : 1580191108395,
+    "stop" : 1580191108406,
+    "duration" : 11
+  },
+  "status" : "passed",
+  "severity" : "trivial"
+}, {
+  "uid" : "f0d61d353c03500",
+  "name" : "Verify Logo presence on Home Page",
+  "time" : {
+    "start" : 1580191083919,
+    "stop" : 1580191087545,
+    "duration" : 3626
+  },
+  "status" : "passed",
+  "severity" : "minor"
+}, {
+  "uid" : "4ce07cc2daf98fb4",
+  "name" : "Verify user Registration",
+  "time" : {
+    "start" : 1580191103382,
+    "stop" : 1580191103383,
+    "duration" : 1
+  },
+  "status" : "skipped",
+  "severity" : "normal"
+} ]

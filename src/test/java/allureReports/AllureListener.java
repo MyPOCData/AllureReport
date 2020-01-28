@@ -1,5 +1,14 @@
 package allureReports;
 
+import java.io.File;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.concurrent.TimeUnit;
+
+import org.monte.media.Format;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -24,6 +33,28 @@ public class AllureListener implements ITestListener {
 	public static String saveTextLog(String message) {
 		return message;
 	}
+	
+	@Attachment(value = "video", type = "video/quicktime")
+    public byte[] attachment() throws Exception {
+//		SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH.mm.ss");
+//		MyScreenRecorder.startRecording(dateFormat.format(new Date()));
+        try {
+            File video = MyScreenRecorder.screenRecorder.getCreatedMovieFiles().get(0);
+//            await().atMost(5, TimeUnit.SECONDS)
+//                    .pollDelay(1, TimeUnit.SECONDS)
+//                    .ignoreExceptions()
+//                    .until(() -> video != null);
+            return Files.readAllBytes(Paths.get(video.getAbsolutePath()));
+        } catch (IOException e) {
+            return new byte[0];
+        }
+    }
+	
+//	@Attachment
+//	public File saveVideo() throws SecurityException, Exception {
+//		return MyScreenRecorder.screenRecorder.getCreatedMovieFiles().get(0);
+//		//return new Tests() {}.getClass().getEnclosingMethod().getName();		
+//	}
 		
 	
 	@Override
@@ -45,6 +76,11 @@ public class AllureListener implements ITestListener {
 	@Override
 	public void onTestSuccess(ITestResult iTestResult) {
 		System.out.println("I am in onTestSuccess method " + getTestMethodName(iTestResult) + " succeed");
+		try {
+			attachment();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 
 	@Override
@@ -58,6 +94,11 @@ public class AllureListener implements ITestListener {
 			saveFailureScreenShot(driver);
 		}
 		saveTextLog(getTestMethodName(iTestResult) + " failed and screenshot taken!");	
+		try {
+			attachment();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 
 	

@@ -1,0 +1,93 @@
+{
+  "uid" : "b1a8273437954620fa374b796ffaacdd",
+  "name" : "behaviors",
+  "children" : [ {
+    "name" : "EP001",
+    "children" : [ {
+      "name" : "Feature1: Logo",
+      "children" : [ {
+        "name" : "Story:Logo Presence",
+        "children" : [ {
+          "name" : "Verify Logo presence on Home Page",
+          "uid" : "f0d61d353c03500",
+          "parentUid" : "5c9ada9399fc8b30409a7d163e2dbc3d",
+          "status" : "passed",
+          "time" : {
+            "start" : 1580191083919,
+            "stop" : 1580191087545,
+            "duration" : 3626
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ ]
+        } ],
+        "uid" : "5c9ada9399fc8b30409a7d163e2dbc3d"
+      } ],
+      "uid" : "0756a9da78105733d7b9dc6d853979f6"
+    }, {
+      "name" : "Feature2: Login",
+      "children" : [ {
+        "name" : "Story:Valid login",
+        "children" : [ {
+          "name" : "Verify login",
+          "uid" : "c234440de5b42adc",
+          "parentUid" : "6b0e85337ba687c5d1dacdd2ccfdb6d3",
+          "status" : "failed",
+          "time" : {
+            "start" : 1580191092571,
+            "stop" : 1580191098365,
+            "duration" : 5794
+          },
+          "flaky" : true,
+          "newFailed" : true,
+          "parameters" : [ ]
+        } ],
+        "uid" : "6b0e85337ba687c5d1dacdd2ccfdb6d3"
+      } ],
+      "uid" : "781c7923fab9e1d00ffdd3ac5071262f"
+    }, {
+      "name" : "Feature3: Registration",
+      "children" : [ {
+        "name" : "Story:User registration",
+        "children" : [ {
+          "name" : "Verify user Registration",
+          "uid" : "4ce07cc2daf98fb4",
+          "parentUid" : "f76bfdfded6289e1ebfd7978cb738fe0",
+          "status" : "skipped",
+          "time" : {
+            "start" : 1580191103382,
+            "stop" : 1580191103383,
+            "duration" : 1
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ ]
+        } ],
+        "uid" : "f76bfdfded6289e1ebfd7978cb738fe0"
+      } ],
+      "uid" : "3f68ef3655f3e47eb07476d26190b366"
+    }, {
+      "name" : "Feature3: Registration1",
+      "children" : [ {
+        "name" : "Story:User registration1",
+        "children" : [ {
+          "name" : "Verify user Registration1",
+          "uid" : "4a73508efe443473",
+          "parentUid" : "854df9905ec873794371102fdbc4a778",
+          "status" : "passed",
+          "time" : {
+            "start" : 1580191108395,
+            "stop" : 1580191108406,
+            "duration" : 11
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ ]
+        } ],
+        "uid" : "854df9905ec873794371102fdbc4a778"
+      } ],
+      "uid" : "562734836214f6bd4721f3577d52f1bb"
+    } ],
+    "uid" : "f416afe67be4bfdcd7f18b618c24be1b"
+  } ]
+}
