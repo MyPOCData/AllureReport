@@ -47,6 +47,7 @@ public class Tests extends BaseClass{
 
 	}
 	
+	
 	@Severity(SeverityLevel.MINOR)	
 	@Test(priority=1, description="Verify Logo presence on Home Page")
 	@Description("Verify Logo presence on Home Page........")
@@ -61,6 +62,7 @@ public class Tests extends BaseClass{
 		Assert.assertEquals(dispStatus, true);
 		MyScreenRecorder.stopRecording();
 	}
+	
 	
 	@Severity(SeverityLevel.BLOCKER)	
 	@Test(priority=2, description="Verify login")
@@ -79,6 +81,7 @@ public class Tests extends BaseClass{
 		Assert.assertEquals(driver.getTitle(), "nopCommerce demo store");
 		MyScreenRecorder.stopRecording();
 	}
+	
 		
 	@Severity(SeverityLevel.NORMAL)	
 	@Test(priority=3, description="Verify user Registration")
@@ -91,6 +94,7 @@ public class Tests extends BaseClass{
 		throw new SkipException("Skipping this Test");
 	}
 	
+	
 	@Severity(SeverityLevel.TRIVIAL)	
 	@Test(priority=4, description="Verify user Registration1")
 	@Description("Verify user Registration1........")
@@ -101,6 +105,7 @@ public class Tests extends BaseClass{
 	public void registration1Test() throws Exception{
 		Assert.assertTrue(true);
 	}
+	
 	
 	@Severity(SeverityLevel.TRIVIAL)	
 	@Test(priority=5, description="Verify user Registration11")
@@ -119,6 +124,7 @@ public class Tests extends BaseClass{
 		driver.quit();
 	}
 	
+	
 	@BeforeSuite
 	public void cleanResults() throws IOException {
 		File dirAllureResult = new File(PATH + File.separator + "allure-results");
@@ -136,6 +142,7 @@ public class Tests extends BaseClass{
         	Runtime.getRuntime().exec(String.format("rm -r %s", dirResult));
         }
 	}
+	
 	
 	@AfterSuite
 	public void reportGen() throws IOException, InterruptedException {
