@@ -9,52 +9,65 @@
         "name" : "allureReports.Tests",
         "children" : [ {
           "name" : "Verify Logo presence on Home Page",
-          "uid" : "f0d61d353c03500",
+          "uid" : "b284f0165555051",
           "parentUid" : "1a5e340e0136fd2f223bfee56de80011",
           "status" : "passed",
           "time" : {
-            "start" : 1580191083919,
-            "stop" : 1580191087545,
-            "duration" : 3626
+            "start" : 1580668387546,
+            "stop" : 1580668390505,
+            "duration" : 2959
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ ]
         }, {
           "name" : "Verify login",
-          "uid" : "c234440de5b42adc",
+          "uid" : "e7d3aaa75eaaa45a",
           "parentUid" : "1a5e340e0136fd2f223bfee56de80011",
-          "status" : "failed",
+          "status" : "passed",
           "time" : {
-            "start" : 1580191092571,
-            "stop" : 1580191098365,
-            "duration" : 5794
+            "start" : 1580668395535,
+            "stop" : 1580668405543,
+            "duration" : 10008
           },
-          "flaky" : true,
-          "newFailed" : true,
+          "flaky" : false,
+          "newFailed" : false,
           "parameters" : [ ]
         }, {
           "name" : "Verify user Registration",
-          "uid" : "4ce07cc2daf98fb4",
+          "uid" : "784693639c307304",
           "parentUid" : "1a5e340e0136fd2f223bfee56de80011",
           "status" : "skipped",
           "time" : {
-            "start" : 1580191103382,
-            "stop" : 1580191103383,
-            "duration" : 1
+            "start" : 1580668410568,
+            "stop" : 1580668410570,
+            "duration" : 2
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ ]
         }, {
           "name" : "Verify user Registration1",
-          "uid" : "4a73508efe443473",
+          "uid" : "fad389541085fdca",
           "parentUid" : "1a5e340e0136fd2f223bfee56de80011",
           "status" : "passed",
           "time" : {
-            "start" : 1580191108395,
-            "stop" : 1580191108406,
-            "duration" : 11
+            "start" : 1580668415583,
+            "stop" : 1580668415597,
+            "duration" : 14
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ ]
+        }, {
+          "name" : "Verify user Registration11",
+          "uid" : "5b3f963688b675da",
+          "parentUid" : "1a5e340e0136fd2f223bfee56de80011",
+          "status" : "passed",
+          "time" : {
+            "start" : 1580668420605,
+            "stop" : 1580668420617,
+            "duration" : 12
           },
           "flaky" : false,
           "newFailed" : false,

@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+      <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -38,7 +38,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-Suite">
-              <span class="suite-name border-failed">Suite</span>
+              <span class="suite-name border-skipped">Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -91,21 +91,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">4 methods, 1 failed,  1 skipped,  2 passed</span>
-                  </li>
-                  <li>
-                    <span class="method-list-title failed">Failed methods</span>
-                    <span class="show-or-hide-methods failed">
-                      <a href="#" panel-name="suite-Suite" class="hide-methods failed suite-Suite"> (hide)</a> <!-- hide-methods failed suite-Suite -->
-                      <a href="#" panel-name="suite-Suite" class="show-methods failed suite-Suite"> (show)</a> <!-- show-methods failed suite-Suite -->
-                    </span>
-                    <div class="method-list-content failed suite-Suite">
-                      <span>
-                        <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="allureReports.Tests" hash-for-method="loginTest">loginTest</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                    </div> <!-- method-list-content failed suite-Suite -->
+                    <span class="method-stats">5 methods,  1 skipped,  4 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title skipped">Skipped methods</span>
@@ -130,7 +116,17 @@
                     <div class="method-list-content passed suite-Suite">
                       <span>
                         <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="allureReports.Tests" hash-for-method="loginTest">loginTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-Suite" title="allureReports.Tests" hash-for-method="logoPresence">logoPresence</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="allureReports.Tests" hash-for-method="registration11Test">registration11Test</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -150,28 +146,6 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Suite" class="panel Suite">
-          <div class="suite-Suite-class-failed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
-              <span class="class-name">allureReports.Tests</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="loginTest">
-                  </a> <!-- loginTest -->
-                  <span class="method-name">loginTest</span>
-                  <div class="stack-trace">java.lang.AssertionError: expected [nopCommerce demo store] but found [nopCommerce demo store. Login]
-	at allureReports.Tests.loginTest(Tests.java:78)
-	at java.util.ArrayList.forEach(ArrayList.java:1257)
-... Removed 35 stack frames
-</div> <!-- stack-trace -->
-                  <em>
-(Verify login)                  </em>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-failed -->
           <div class="suite-Suite-class-skipped">
             <div class="main-panel-header rounded-window-top">
               <img src="skipped.png"/>
@@ -184,7 +158,7 @@
                   </a> <!-- registrationTest -->
                   <span class="method-name">registrationTest</span>
                   <div class="stack-trace">org.testng.SkipException: Skipping this Test
-	at allureReports.Tests.registrationTest(Tests.java:90)
+	at allureReports.Tests.registrationTest(Tests.java:91)
 	at java.util.ArrayList.forEach(ArrayList.java:1257)
 ... Removed 30 stack frames
 </div> <!-- stack-trace -->
@@ -202,11 +176,29 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
+                  <a name="loginTest">
+                  </a> <!-- loginTest -->
+                  <span class="method-name">loginTest</span>
+                  <em>
+(Verify login)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
                   <a name="logoPresence">
                   </a> <!-- logoPresence -->
                   <span class="method-name">logoPresence</span>
                   <em>
 (Verify Logo presence on Home Page)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="registration11Test">
+                  </a> <!-- registration11Test -->
+                  <span class="method-name">registration11Test</span>
+                  <em>
+(Verify user Registration11)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
@@ -272,15 +264,15 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(4);
+data.addRows(5);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'logoPresence')
+data.setCell(0, 1, 'loginTest')
 data.setCell(0, 2, 'allureReports.Tests')
-data.setCell(0, 3, 13673);
+data.setCell(0, 3, 14980);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'loginTest')
+data.setCell(1, 1, 'logoPresence')
 data.setCell(1, 2, 'allureReports.Tests')
-data.setCell(1, 3, 9913);
+data.setCell(1, 3, 13001);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'registrationTest')
 data.setCell(2, 2, 'allureReports.Tests')
@@ -289,11 +281,15 @@ data.setCell(3, 0, 3)
 data.setCell(3, 1, 'registration1Test')
 data.setCell(3, 2, 'allureReports.Tests')
 data.setCell(3, 3, 5008);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'registration11Test')
+data.setCell(4, 2, 'allureReports.Tests')
+data.setCell(4, 3, 5005);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 33 seconds</span>
+              <span class="suite-total-time">Total running time: 43 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -326,65 +322,75 @@ return data;
               </div> <!-- configuration-suite before -->
               <div class="configuration-class before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">83 ms</span>
+                <span class="method-start">202 ms</span>
               </div> <!-- configuration-class before -->
               <div class="configuration-method before">
                 <span class="method-name">videoRecord</span>
-                <span class="method-start">11001 ms</span>
+                <span class="method-start">16338 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">logoPresence</span>
-                <span class="method-start">11178 ms</span>
+                <span class="method-start">16483 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">stopRecoding</span>
-                <span class="method-start">24879 ms</span>
+                <span class="method-start">29517 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">videoRecord</span>
-                <span class="method-start">24883 ms</span>
+                <span class="method-start">29521 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
                 <span class="method-name">loginTest</span>
-                <span class="method-start">24884 ms</span>
+                <span class="method-start">29523 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">stopRecoding</span>
-                <span class="method-start">35692 ms</span>
+                <span class="method-start">44552 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">videoRecord</span>
-                <span class="method-start">35694 ms</span>
+                <span class="method-start">44556 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">registrationTest</span>
-                <span class="method-start">35695 ms</span>
+                <span class="method-start">44557 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">stopRecoding</span>
-                <span class="method-start">40707 ms</span>
+                <span class="method-start">49570 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">videoRecord</span>
-                <span class="method-start">40709 ms</span>
+                <span class="method-start">49572 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">registration1Test</span>
-                <span class="method-start">40710 ms</span>
+                <span class="method-start">49574 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">stopRecoding</span>
-                <span class="method-start">45730 ms</span>
+                <span class="method-start">54596 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">videoRecord</span>
+                <span class="method-start">54598 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">registration11Test</span>
+                <span class="method-start">54599 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">stopRecoding</span>
+                <span class="method-start">59619 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-class after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">45732 ms</span>
+                <span class="method-start">59622 ms</span>
               </div> <!-- configuration-class after -->
               <div class="configuration-suite after">
                 <span class="method-name">reportGen</span>
-                <span class="method-start">51018 ms</span>
+                <span class="method-start">64777 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

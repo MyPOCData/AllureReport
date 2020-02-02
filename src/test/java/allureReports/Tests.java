@@ -28,6 +28,7 @@ import io.qameta.allure.Story;
 public class Tests extends BaseClass{
 
 	public WebDriver driver;
+	String PATH = System.getProperty("user.dir");
 	
 	@BeforeClass 
 	public void setUp() {
@@ -38,7 +39,7 @@ public class Tests extends BaseClass{
 	
 	@BeforeMethod
 	public void videoRecord() throws SecurityException, Exception {
-
+		System.out.println(PATH);
 	}
 	
 	@AfterMethod
@@ -71,8 +72,8 @@ public class Tests extends BaseClass{
 	public void loginTest() throws Exception{
 		MyScreenRecorder.startRecording(new Tests() {}.getClass().getEnclosingMethod().getName());
 		driver.findElement(By.linkText("Log in")).click();
-		driver.findElement(By.id("Email")).sendKeys("pavanoltraining@gmail.com");
-		driver.findElement(By.id("Password")).sendKeys("Test@123");
+		driver.findElement(By.id("Email")).sendKeys("abhi.abhi@gmail.com");
+		driver.findElement(By.id("Password")).sendKeys("abhi1234");
 		driver.findElement(By.xpath("//input[@class='button-1 login-button']")).click();
 		Thread.sleep(3000);
 		Assert.assertEquals(driver.getTitle(), "nopCommerce demo store");
@@ -101,6 +102,17 @@ public class Tests extends BaseClass{
 		Assert.assertTrue(true);
 	}
 	
+	@Severity(SeverityLevel.TRIVIAL)	
+	@Test(priority=5, description="Verify user Registration11")
+	@Description("Verify user Registration11........")
+	@Epic("EP001")
+	@Feature("Feature3: Registration11")
+	@Story("Story:User registration11")
+	
+	public void registration11Test() throws Exception{
+		Assert.assertTrue(true);
+	}
+	
 
 	@AfterClass
 	public void tearDown(){	
@@ -109,7 +121,7 @@ public class Tests extends BaseClass{
 	
 	@BeforeSuite
 	public void cleanResults() throws IOException {
-		File dirAllureResult = new File("/Users/b0097042/my-workplace/AllurereportingSeleniumTestNG/allure-results");
+		File dirAllureResult = new File(PATH + File.separator + "allure-results");
         if(dirAllureResult.exists()) {
         	//remove all files except history folder 
         	for (File file: dirAllureResult.listFiles()) {
@@ -118,53 +130,35 @@ public class Tests extends BaseClass{
         		}
         	}
         }
-        File dirResult = new File("/Users/b0097042/my-workplace/AllurereportingSeleniumTestNG/Report");
+        File dirResult = new File(PATH + File.separator + "Report");
         if(dirResult.exists()) {
         	//remove Report folder and its contents
-        	String removeReportFolder = "rm -r /Users/b0097042/my-workplace/AllurereportingSeleniumTestNG/Report";
-        	Runtime.getRuntime().exec(removeReportFolder);
+        	Runtime.getRuntime().exec(String.format("rm -r %s", dirResult));
         }
 	}
 	
 	@AfterSuite
 	public void reportGen() throws IOException, InterruptedException {
-		File reportDir = new File("/Users/b0097042/my-workplace/AllurereportingSeleniumTestNG/Report");
-		reportDir.mkdir();
-		String genReport = "/usr/local/bin/allure generate -c -o /Users/b0097042/my-workplace/AllurereportingSeleniumTestNG/Report";
-				
-		Runtime.getRuntime().exec(genReport);
-        File temp = new File("/Users/b0097042/my-workplace/AllurereportingSeleniumTestNG/TempReport");
+		File reportDir = new File(PATH + File.separator + "Report");
+		reportDir.mkdir();				
+		Runtime.getRuntime().exec(String.format("/usr/local/bin/allure generate -c -o %s", reportDir));
+        File temp = new File(PATH + File.separator + "TempReport");
         if(temp.exists()) {
-        	String removeTemp = "rm -r /Users/b0097042/my-workplace/AllurereportingSeleniumTestNG/TempReport";
-            Runtime.getRuntime().exec(removeTemp);
+            Runtime.getRuntime().exec(String.format("rm -r %s", temp));
         }
         Thread.sleep(2000);
         temp.mkdir();
         Thread.sleep(2000);
         CopyData.copyDirectory(reportDir,temp);
 		Thread.sleep(2000);
-        String saveInTempFolder = "cp -R /Users/b0097042/my-workplace/AllurereportingSeleniumTestNG/Report /Users/b0097042/my-workplace/AllurereportingSeleniumTestNG/TempReport";
-        Runtime.getRuntime().exec(saveInTempFolder);
+        Runtime.getRuntime().exec(String.format("cp -R %s %s", reportDir,temp));
 		//remove all files/folders from history folder of allure_result
-        File historyFolder = new File("/Users/b0097042/my-workplace/AllurereportingSeleniumTestNG/allure-results/history");
+        File historyFolder = new File(PATH + File.separator + "allure-results/history");
         if(historyFolder.exists()) {
-        	String removeReportFolder = "rm -r /Users/b0097042/my-workplace/AllurereportingSeleniumTestNG/allure-results/history";
-            Runtime.getRuntime().exec(removeReportFolder);
+            Runtime.getRuntime().exec(String.format("rm -r %s", historyFolder));
             Thread.sleep(2000);
         }
-		String cpHistoryFolder = "cp -R /Users/b0097042/my-workplace/AllurereportingSeleniumTestNG/Report/history/ /Users/b0097042/my-workplace/AllurereportingSeleniumTestNG/allure-results/history";
-		Runtime.getRuntime().exec(cpHistoryFolder);		
+        File hFolder = new File(PATH + File.separator + "Report/history/");
+		Runtime.getRuntime().exec(String.format("cp -R %s %s", hFolder,historyFolder));		
 	}	
-	
-//	public void copyDirectory(File sourceLocation , File targetLocation)throws IOException {
-//		if (sourceLocation.isDirectory()) {
-//			if (!targetLocation.exists()) {
-//				targetLocation.mkdir();
-//		    }
-//		    String[] children = sourceLocation.list();
-//		    for (int i=0; i<children.length; i++) {
-//		    	copyDirectory(new File(sourceLocation, children[i]),new File(targetLocation, children[i]));
-//		    }
-//		}
-//	}
 }

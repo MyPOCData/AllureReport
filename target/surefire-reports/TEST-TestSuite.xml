@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="TestSuite" time="65.679" tests="4" errors="0" skipped="1" failures="1">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="TestSuite" time="79.617" tests="5" errors="0" skipped="1" failures="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_171.jdk/Contents/Home/jre/lib"/>
@@ -25,7 +25,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="os.name" value="Mac OS X"/>
-    <property name="classworlds.conf" value="/Users/b0097042/my-workplace/.metadata/.plugins/org.eclipse.m2e.launching/launches/m2conf8736035013184376288.tmp"/>
+    <property name="classworlds.conf" value="/Users/b0097042/my-workplace/.metadata/.plugins/org.eclipse.m2e.launching/launches/m2conf7329959070198448760.tmp"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
     <property name="java.library.path" value="/Users/b0097042/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:."/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
@@ -61,23 +61,15 @@
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase name="logoPresence" classname="allureReports.Tests" time="13.688"/>
-  <testcase name="loginTest" classname="allureReports.Tests" time="10.804">
-    <failure message="expected [nopCommerce demo store] but found [nopCommerce demo store. Login]" type="java.lang.AssertionError">java.lang.AssertionError: expected [nopCommerce demo store] but found [nopCommerce demo store. Login]
-	at allureReports.Tests.loginTest(Tests.java:78)
-</failure>
-    <system-out><![CDATA[I am in onTestStart method loginTest start
-I am in onTestFailure method loginTest failed
-Screenshot captured for test case:loginTest
-]]></system-out>
-    <system-err><![CDATA[[1580191093.993][SEVERE]: Timed out receiving message from renderer: 0.100
-]]></system-err>
-  </testcase>
+  <testcase name="logoPresence" classname="allureReports.Tests" time="2.97"/>
+  <testcase name="loginTest" classname="allureReports.Tests" time="10.021"/>
   <testcase name="registrationTest" classname="allureReports.Tests" time="0">
     <skipped message="Skipping this Test"/>
-    <system-out><![CDATA[I am in onTestStart method registrationTest start
+    <system-out><![CDATA[/Users/b0097042/my-workplace/AllurereportingSeleniumTestNG
+I am in onTestStart method registrationTest start
 I am in onTestSkipped method registrationTest skipped
 ]]></system-out>
   </testcase>
-  <testcase name="registration1Test" classname="allureReports.Tests" time="5.019"/>
+  <testcase name="registration1Test" classname="allureReports.Tests" time="0.014"/>
+  <testcase name="registration11Test" classname="allureReports.Tests" time="0.015"/>
 </testsuite>

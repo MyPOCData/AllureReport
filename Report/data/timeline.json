@@ -4,61 +4,74 @@
   "children" : [ {
     "name" : "LTB0206984-Mac.local",
     "children" : [ {
-      "name" : "40126@LTB0206984-Mac.local.main(1)",
+      "name" : "41177@LTB0206984-Mac.local.main(1)",
       "children" : [ {
-        "name" : "Verify user Registration",
-        "uid" : "4ce07cc2daf98fb4",
-        "parentUid" : "eb82976f49254637316d51f078e01314",
-        "status" : "skipped",
+        "name" : "Verify user Registration11",
+        "uid" : "5b3f963688b675da",
+        "parentUid" : "1d0de8d800b0635d75f7e75e0a46931f",
+        "status" : "passed",
         "time" : {
-          "start" : 1580191103382,
-          "stop" : 1580191103383,
-          "duration" : 1
+          "start" : 1580668420605,
+          "stop" : 1580668420617,
+          "duration" : 12
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       }, {
-        "name" : "Verify login",
-        "uid" : "c234440de5b42adc",
-        "parentUid" : "eb82976f49254637316d51f078e01314",
-        "status" : "failed",
+        "name" : "Verify user Registration",
+        "uid" : "784693639c307304",
+        "parentUid" : "1d0de8d800b0635d75f7e75e0a46931f",
+        "status" : "skipped",
         "time" : {
-          "start" : 1580191092571,
-          "stop" : 1580191098365,
-          "duration" : 5794
-        },
-        "flaky" : true,
-        "newFailed" : true,
-        "parameters" : [ ]
-      }, {
-        "name" : "Verify user Registration1",
-        "uid" : "4a73508efe443473",
-        "parentUid" : "eb82976f49254637316d51f078e01314",
-        "status" : "passed",
-        "time" : {
-          "start" : 1580191108395,
-          "stop" : 1580191108406,
-          "duration" : 11
+          "start" : 1580668410568,
+          "stop" : 1580668410570,
+          "duration" : 2
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       }, {
         "name" : "Verify Logo presence on Home Page",
-        "uid" : "f0d61d353c03500",
-        "parentUid" : "eb82976f49254637316d51f078e01314",
+        "uid" : "b284f0165555051",
+        "parentUid" : "1d0de8d800b0635d75f7e75e0a46931f",
         "status" : "passed",
         "time" : {
-          "start" : 1580191083919,
-          "stop" : 1580191087545,
-          "duration" : 3626
+          "start" : 1580668387546,
+          "stop" : 1580668390505,
+          "duration" : 2959
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Verify login",
+        "uid" : "e7d3aaa75eaaa45a",
+        "parentUid" : "1d0de8d800b0635d75f7e75e0a46931f",
+        "status" : "passed",
+        "time" : {
+          "start" : 1580668395535,
+          "stop" : 1580668405543,
+          "duration" : 10008
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Verify user Registration1",
+        "uid" : "fad389541085fdca",
+        "parentUid" : "1d0de8d800b0635d75f7e75e0a46931f",
+        "status" : "passed",
+        "time" : {
+          "start" : 1580668415583,
+          "stop" : 1580668415597,
+          "duration" : 14
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       } ],
-      "uid" : "eb82976f49254637316d51f078e01314"
+      "uid" : "1d0de8d800b0635d75f7e75e0a46931f"
     } ],
     "uid" : "be37efec281360dc6159619a911d71e1"
   } ]
