@@ -10,7 +10,7 @@
 
 5. For Allure commonds need to install tool: -> npm install -g allure-commandline --save-dev
 
-6. To open report : -> /usr/local/bin/allure open /Users/b0097042/my-workplace/AllurereportingSeleniumTestNG/Report
+6. To open report : -> /usr/local/bin/allure open Report/
 
 7. To publish report use : https://app.netlify.com/sites/focused-liskov-00f75d/deploys
 
